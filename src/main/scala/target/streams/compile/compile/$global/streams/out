@@ -1,0 +1,55 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorA.scala:3:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{Actor, Props, ActorLogging}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorA.scala:5:22: not found: type Actor[0m
+[0m[[0m[31merror[0m] [0m[0mclass ActorA extends Actor with ActorLogging {[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorA.scala:5:33: not found: type ActorLogging[0m
+[0m[[0m[31merror[0m] [0m[0mclass ActorA extends Actor with ActorLogging {[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorA.scala:7:25: not found: type Receive[0m
+[0m[[0m[31merror[0m] [0m[0m  override def receive: Receive = {[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorA.scala:10:7: not found: value log[0m
+[0m[[0m[31merror[0m] [0m[0m      log.info("I receive your message!")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorA.scala:11:7: not found: value sender[0m
+[0m[[0m[31merror[0m] [0m[0m      sender() ! "I'm A. Nice to meet you!"[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorB.scala:3:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{Actor, ActorLogging, Props}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorB.scala:4:12: object typesafe is not a member of package com[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.typesafe.config.ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorB.scala:7:22: not found: type Actor[0m
+[0m[[0m[31merror[0m] [0m[0mclass ActorB extends Actor with ActorLogging {[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorB.scala:7:33: not found: type ActorLogging[0m
+[0m[[0m[31merror[0m] [0m[0mclass ActorB extends Actor with ActorLogging {[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorB.scala:11:21: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m  val remoteActor = context.actorSelection(path)[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorB.scala:15:25: not found: type Receive[0m
+[0m[[0m[31merror[0m] [0m[0m  override def receive: Receive = {[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/ActorB.scala:18:7: not found: value log[0m
+[0m[[0m[31merror[0m] [0m[0m      log.info("Get your response! ")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/LocalActorMain.scala:3:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{ActorSystem, Props}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/LocalActorMain.scala:7:16: not found: value ActorSystem[0m
+[0m[[0m[31merror[0m] [0m[0m  val system = ActorSystem("LocalActor")[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/RemoteAKKAMain.scala:3:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{ActorSystem, Props}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/RemoteAKKAMain.scala:9:21: not found: value ActorSystem[0m
+[0m[[0m[31merror[0m] [0m[0m  val localSystem = ActorSystem("LocalActor")[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bryantliu/IdeaProjects/KobeDataScience/src/main/scala/AKKA_with_Remote/src/main/scala/RemoteAKKAMain.scala:14:22: not found: value ActorSystem[0m
+[0m[[0m[31merror[0m] [0m[0m  val remoteSystem = ActorSystem("RemoteActor")[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m18 errors found[0m
