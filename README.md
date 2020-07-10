@@ -66,7 +66,7 @@ Call remote AKKA actor! <br>
 Please refer to the image about AKKA constructor below: <br>
 <br>
  
-![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA_Remote_Diagram-AKKA_Remote_with_Server-Client_mode.jpg)
+![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA_Remote_Diagram-AKKA_Remote_with_Deployment_mode.jpg)
  
 <br>
 
