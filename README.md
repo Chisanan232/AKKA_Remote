@@ -23,11 +23,18 @@ The project has 2 parts by the different way how to deploy system topology. They
 ### Server-Client Mode
 
 #### Description 
+Literally, it classifies the software architecture to 2 sections --- "Server" and "Client". <br>
+Please refer to the image about AKKA constructor below: <br>
+<br>
+ 
+![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA Remote Diagram-AKKA_Remote_with_Server-Client_mode.jpg)
+ 
+<br>
 
 
 #### Running Result
 
-For local-actor site, the log message is:
+* For local-actor site, the log message is:
 
 [info] running AKKA_with_Remote.src.main.scala.LocalActorMain <br>
 Call local AKKA actor! <br>
@@ -41,7 +48,7 @@ Call local AKKA actor! <br>
 [INFO] [07/10/2020 13:33:19.798] [LocalActor-akka.actor.default-dispatcher-15] [akka.tcp://LocalActor@127.0.0.1:57231/user/Local-Actor] I'm Remote-Actor. Nice to meet you! <br>
 
 
-For remote-actor site, the log message is: <br>
+* For remote-actor site, the log message is: <br>
 
 [info] running AKKA_with_Remote.src.main.scala.RemoteAKKAMain <br>
 Call remote AKKA actor! <br>
@@ -56,7 +63,22 @@ Call remote AKKA actor! <br>
 ### Deployment Mode
 
 #### Description 
+Please refer to the image about AKKA constructor below: <br>
+<br>
+ 
+![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA Remote Diagram-AKKA_Remote_with_Server-Client_mode.jpg)
+ 
+<br>
 
 
 #### Running Result
+
+[info] running AKKA_with_Remote.src.main.scala.deployment.RemoteMain <br>
+[INFO] [07/10/2020 15:54:54.857] [DeploymentRemote-akka.actor.default-dispatcher-2] [akka://DeploymentRemote/user/Master-Actor] Wake up, employee <br>
+[INFO] [07/10/2020 15:54:54.859] [DeploymentRemote-akka.actor.default-dispatcher-3] [akka://DeploymentRemote/user/Master-Actor/Node-Actor] Hello, my dear boss. <br>
+[INFO] [07/10/2020 15:54:54.859] [DeploymentRemote-akka.actor.default-dispatcher-3] [akka://DeploymentRemote/user/Master-Actor/Node-Actor] Okay, I got it. <br>
+[INFO] [07/10/2020 15:54:54.859] [DeploymentRemote-akka.actor.default-dispatcher-3] [akka://DeploymentRemote/user/Master-Actor/Node-Actor] Sleep and play switch game. <br>
+[INFO] [07/10/2020 15:54:54.859] [DeploymentRemote-akka.actor.default-dispatcher-3] [akka://DeploymentRemote/user/Master-Actor/Node-Actor] I finish my job! <br>
+
+
 
