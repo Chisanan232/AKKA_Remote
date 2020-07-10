@@ -27,7 +27,7 @@ Literally, it classifies the software architecture to 2 sections --- "Server" an
 Please refer to the image about AKKA constructor below: <br>
 <br>
  
-![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA Remote Diagram-AKKA_Remote_with_Server-Client_mode.jpg)
+![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA_Remote_Diagram-AKKA_Remote_with_Server-Client_mode.jpg)
  
 <br>
 
@@ -66,7 +66,7 @@ Call remote AKKA actor! <br>
 Please refer to the image about AKKA constructor below: <br>
 <br>
  
-![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA Remote Diagram-AKKA_Remote_with_Server-Client_mode.jpg)
+![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA_Remote_Diagram-AKKA_Remote_with_Server-Client_mode.jpg)
  
 <br>
 
