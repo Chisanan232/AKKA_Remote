@@ -33,22 +33,22 @@ Please refer to the image about AKKA constructor below: <br>
 
 It's necessary that implement 2 AKKA actor systems for this topology and set 2 AKKA application configurations (But it be permitted that doesn't need to assign anything setting to the system and it will give it a default setting). <br>
 For general SBT project, it could add a 'application.conf' file in directory 'resorces' and give it a content like below: <br>
-"""conf
-akka {
-  actor {
-    provider = "akka.remote.RemoteActorRefProvider"
-  }
-  remote {
-    transports = ["akka.remote.netty.tcp"]
-    netty.tcp {
-      hostname = "127.0.0.1"
-      port = 0
+
+    akka {
+      actor {
+        provider = "akka.remote.RemoteActorRefProvider"
+      }
+      remote {
+        transports = ["akka.remote.netty.tcp"]
+        netty.tcp {
+          hostname = "127.0.0.1"
+          port = 0
+        }
+        log-sent-messages = on
+        log-received-messages = on
+      }
     }
-    log-sent-messages = on
-    log-received-messages = on
-  }
-}
-"""
+
 
 #### AKKA actor application configuration
 
