@@ -31,8 +31,11 @@ Please refer to the image about AKKA constructor below: <br>
  
 <br>
 
-It's necessary that implement 2 AKKA actor systems for this topology and set 2 AKKA application configurations (But it be permitted that doesn't need to assign anything setting to the system and it will give it a default setting). <br>
-For general SBT project, it could add a 'application.conf' file in directory 'resorces' and give it a content like below: <br>
+It's necessary that implement 2 AKKA actor systems for this topology and set 2 AKKA application configurations (But it be permitted that doesn't need to assign anything setting to the system and it will apply default setting) and run code to both nodes 'Server' site and 'Client' site. <br>
+
+
+#### AKKA actor application configuration
+For general SBT project, the default file path is be named as 'application.conf' in directory 'resorces' and give it a content like below: <br>
 
     akka {
       actor {
@@ -44,14 +47,34 @@ For general SBT project, it could add a 'application.conf' file in directory 're
           hostname = "127.0.0.1"
           port = 0
         }
-        log-sent-messages = on
-        log-received-messages = on
       }
     }
 
+Option *hostname* is the node IP address. <br>
+Configuration file 'application.conf' also could be customized to apply through import from outside. Here is a sample code how to do it: <br>
 
-#### AKKA actor application configuration
+"""scala
+import com.typesafe.config.ConfigFactory
 
+ConfigFactory.load("src/main/scala/AKKA_with_Remote/src/main/resources/application-master.conf")
+"""
+
+So it could build a AKKA actor system like below: <br>
+
+"""scala
+package AKKA_with_Remote.src.main.scala.deployment
+
+import akka.actor.{ActorSystem, Props}
+import com.typesafe.config.ConfigFactory
+
+object RemoteMain extends App {
+
+  val system = ActorSystem("DeploymentRemote", ConfigFactory.load("src/main/scala/AKKA_with_Remote/src/main/resources/application-master.conf"))
+  val master = system.actorOf(Props[MasterActor], "Master-Actor")
+  master ! Message
+
+}
+"""
 
 #### Running Result
 
