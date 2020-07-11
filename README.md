@@ -31,7 +31,7 @@ Please refer to the image about AKKA constructor below: <br>
  
 <br>
 
-It's necessary that implement 2 AKKA actor systems for this topology and set 2 AKKA application configurations (But it be permitted that doesn't need to assign anything setting to the system and it will apply default setting) and run code to both nodes 'Server' site and 'Client' site. <br>
+It's necessary that implement multiple AKKA actor systems (in this example is 2 systems) for this topology and set same AKKA application configurations amount (But it be permitted that doesn't need to assign anything setting to the system and it will apply default setting) and run code to both nodes 'Server' site and 'Client' site. <br>
 
 
 #### AKKA actor application configuration
