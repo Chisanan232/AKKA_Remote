@@ -53,15 +53,15 @@ For general SBT project, the default file path is be named as 'application.conf'
 Option *hostname* is the node IP address. <br>
 Configuration file 'application.conf' also could be customized to apply through import from outside. Here is a sample code how to do it: <br>
 
-"""scala
+```scala
 import com.typesafe.config.ConfigFactory
 
 ConfigFactory.load("src/main/scala/AKKA_with_Remote/src/main/resources/application-master.conf")
-"""
+```
 
 So it could build a AKKA actor system like below: <br>
 
-"""scala
+```scala
 package AKKA_with_Remote.src.main.scala.deployment
 
 import akka.actor.{ActorSystem, Props}
@@ -74,7 +74,7 @@ object RemoteMain extends App {
   master ! Message
 
 }
-"""
+```
 
 #### Running Result
 
