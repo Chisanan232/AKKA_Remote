@@ -56,7 +56,7 @@ Configuration file 'application.conf' also could be customized to apply through 
 ```scala
 import com.typesafe.config.ConfigFactory
 
-ConfigFactory.load("src/main/scala/AKKA_with_Remote/src/main/resources/application-master.conf")
+ConfigFactory.load("File application.conf path")
 ```
 
 So it could build a AKKA actor system like below: <br>
@@ -69,7 +69,7 @@ import com.typesafe.config.ConfigFactory
 
 object RemoteMain extends App {
 
-  val system = ActorSystem("DeploymentRemote", ConfigFactory.load("src/main/scala/AKKA_with_Remote/src/main/resources/application-master.conf"))
+  val system = ActorSystem("DeploymentRemote", ConfigFactory.load("File application.conf path"))
   val master = system.actorOf(Props[MasterActor], "Master-Actor")
   master ! Message
 
