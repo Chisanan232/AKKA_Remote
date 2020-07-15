@@ -31,6 +31,50 @@ Please refer to the image about AKKA constructor below: <br>
  
 <br>
 
+It's necessary that implement multiple AKKA actor systems (in this example is 2 systems) for this topology and set same AKKA application configurations amount (But it be permitted that doesn't need to assign anything setting to the system and it will apply default setting) and run code to both nodes 'Server' site and 'Client' site. <br>
+
+
+#### AKKA actor application configuration
+For general SBT project, the default file path is be named as 'application.conf' in directory 'resorces' and give it a content like below: <br>
+
+    akka {
+      actor {
+        provider = "akka.remote.RemoteActorRefProvider"
+      }
+      remote {
+        transports = ["akka.remote.netty.tcp"]
+        netty.tcp {
+          hostname = "127.0.0.1"
+          port = 0
+        }
+      }
+    }
+
+Option *hostname* is the node IP address. <br>
+Configuration file 'application.conf' also could be customized to apply through import from outside. Here is a sample code how to do it: <br>
+
+```scala
+import com.typesafe.config.ConfigFactory
+
+ConfigFactory.load("File application.conf path")
+```
+
+So it could build a AKKA actor system like below: <br>
+
+```scala
+package AKKA_with_Remote.src.main.scala.deployment
+
+import akka.actor.{ActorSystem, Props}
+import com.typesafe.config.ConfigFactory
+
+object RemoteMain extends App {
+
+  val system = ActorSystem("DeploymentRemote", ConfigFactory.load("File application.conf path"))
+  val master = system.actorOf(Props[MasterActor], "Master-Actor")
+  master ! Message
+
+}
+```
 
 #### Running Result
 
@@ -69,6 +113,9 @@ Please refer to the image about AKKA constructor below: <br>
 ![](https://github.com/Chisanan232/AKKA_Remote/raw/master/docs/imgs/AKKA_Remote_Diagram-AKKA_Remote_with_Deployment_mode.jpg)
  
 <br>
+
+
+#### AKKA actor application configuration
 
 
 #### Running Result
